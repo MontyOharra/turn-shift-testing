@@ -18,3 +18,8 @@ install: init
 
 clean:
 	rm -rf $(ENV_DIR)
+
+run:
+	. $(ENV_DIR)/bin/activate && \
+	$(PYTHON) -u -m test && \
+	deactivate
