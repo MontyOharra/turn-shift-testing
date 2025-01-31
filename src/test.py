@@ -2,6 +2,10 @@ import pyaudio
 from faster_whisper import WhisperModel
 import os
 import wave
+import torch
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(f'Using {device} device.')
 
 def transcribeChunk(model, file_path):
     segments, info = model.transcribe(file_path, beam_size=7)
@@ -10,7 +14,7 @@ def transcribeChunk(model, file_path):
 
 def recordChunk(p, stream, file_path, chunk_length=1):
     frames = []
-    for _ in range(0, int(16000 / 1024 * chunk_length)):
+    for _ in range(0, int(8000/ 1024 * chunk_length)):
         data = stream.read(1024)
         frames.append(data)
     
@@ -22,8 +26,10 @@ def recordChunk(p, stream, file_path, chunk_length=1):
     wf.close()
 
 def main2():
+    print("starting up")
     model_size = "medium.en"
-    model = WhisperModel(model_size, device="cpu", compute_type="int8")
+    model = WhisperModel(model_size, device="cuda", compute_type="float16")
+    # print("device: ", device)
 
     print("check1")
     p = pyaudio.PyAudio()
@@ -32,12 +38,16 @@ def main2():
     
     try:
         while True:
+            print("Recording...")
             chunk_file = "temp_chunk.wav"
             recordChunk(p, stream, chunk_file)
             transcription = transcribeChunk(model, chunk_file)
             print(transcription)
+            with open('transcription.txt', 'a') as file:
+                if transcription != "" and transcription != " Thank you for watching!" and transcription != " Thanks for watching!":
+                    file.write(transcription + "\n") 
             os.remove(chunk_file)
-    except KeyboardInterrupt:
+    except KeyboardInterrupt: #ctrl + c
         print("stopping...")
 
     finally:
