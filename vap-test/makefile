@@ -13,13 +13,14 @@ VAP_REPO_LINK = https://github.com/ErikEkstedt/VoiceActivityProjection.git
 
 # Create a new conda environment in folder $(ENV_DIR).
 # Remove TurnGPT if it exists, clone the repo, and clone the datasets_turntaking repo.   
-init: 
+init: clean
 	conda create -p $(ENV_DIR) python=3 -y
 	rm -rf $(VAP_REPO_NAME) && \
 	git clone $(VAP_REPO_LINK)
 
 # Install the required packages, The first line are root-dependencies.
 # All other dependencies are found in TurnGPT/requirements.txt and datasets_turntaking/requirements.txt
+# This takes a really long time per pip install so just wait even if it looks like nothing is happening
 install: init
 	conda install pytorch torchvision torchaudio cudatoolkit=11.6 -c pytorch -y
 	conda run -p $(ENV_DIR) $(PIP) install -r requirements.txt
@@ -30,9 +31,6 @@ install: init
 clean:
 	rm -rf $(VAP_REPO_NAME)
 	rm -rf $(ENV_DIR)
-
-temp:
-	conda run -p $(ENV_DIR) $(PIP) install -r requirements.txt
 
 # Run test.py in the environment. 
 run-test:
