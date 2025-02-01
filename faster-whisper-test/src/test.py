@@ -43,9 +43,6 @@ def main2():
             recordChunk(p, stream, chunk_file)
             transcription = transcribeChunk(model, chunk_file)
             print(transcription)
-            with open('transcription.txt', 'a') as file:
-                if transcription != "" and transcription != " Thank you for watching!" and transcription != " Thanks for watching!":
-                    file.write(transcription + "\n") 
             os.remove(chunk_file)
     except KeyboardInterrupt: #ctrl + c
         print("stopping...")
