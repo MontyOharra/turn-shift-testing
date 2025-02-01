@@ -1,6 +1,6 @@
 # TurnGPT
 turn-gpt-test/TurnGPT/
-VoiceActivityProjection/
+vap-test/VoiceActivityProjection/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
