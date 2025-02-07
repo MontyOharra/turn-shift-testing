@@ -5,20 +5,20 @@ PIP     = pip
 
 .PHONY: init install clean run
 
-# 1. Create a new conda environment in folder ".venv" 
-#    and install a specific Python version (e.g., 3.9).
-init:
+# Create a new conda environment in folder $(ENV_DIR).
+init: clean
 	conda create -p $(ENV_DIR) python=3.9 -y
 
-# 2. Install the required packages using pip inside that conda environment.
+# Install the required packages
 install: init
+	conda run -p $(ENV_DIR) conda install nvidia::libcublas -y
 	conda run -p $(ENV_DIR) conda install cudatoolkit cudnn -y
 	conda run -p $(ENV_DIR) $(PIP) install -r requirements.txt
 
-# 3. Remove the entire environment folder.
+# Remove the entire environment folder.
 clean:
 	rm -rf $(ENV_DIR)
 
-# 4. Run your Python module "test.py" (or "test" as a module) inside the conda environment.
-run:
-	conda run -p $(ENV_DIR) $(PYTHON) -u -m test
+
+run-test:
+	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m test
