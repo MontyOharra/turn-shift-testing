@@ -1,56 +1,53 @@
+from utils import transcribeChunk, recordChunk  
 import pyaudio
 from faster_whisper import WhisperModel
 import os
-import wave
 import torch
+
+print(torch.cuda.is_available())
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f'Using {device} device.')
 
-def transcribeChunk(model, file_path):
-    segments, info = model.transcribe(file_path, beam_size=7)
-    transcription = ' '.join(segment.text for segment in segments)
-    return transcription
-
-def recordChunk(p, stream, file_path, chunk_length=1):
-    frames = []
-    for _ in range(0, int(8000/ 1024 * chunk_length)):
-        data = stream.read(1024)
-        frames.append(data)
-    
-    wf = wave.open(file_path, 'wb')
-    wf.setnchannels(1)
-    wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
-    wf.setframerate(16000)
-    wf.writeframes(b''.join(frames))
-    wf.close()
-
 def main2():
     print("starting up")
     model_size = "medium.en"
-    model = WhisperModel(model_size, device="cuda", compute_type="float16")
-    # print("device: ", device)
+    model = WhisperModel(model_size, device="cuda", compute_type="float32") 
+    print("Whisper model loaded.")
 
     print("check1")
     p = pyaudio.PyAudio()
     print("check2")
-    stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=1024)
+
+    for i in range(p.get_device_count()):
+        print(p.get_device_info_by_index(i))
+        
+    device_index = p.get_default_input_device_info()['index']
+    default_sample_rate = p.get_device_info_by_index(device_index)['defaultSampleRate']
+    print(f"Default sample rate: {default_sample_rate}")
+    print(f"Using input device {device_index}")
+    stream = p.open(format=pyaudio.paInt16, channels=1, rate=int(default_sample_rate), input=True, frames_per_buffer=65536)
+    print("Stream opened successfully.")
     
     try:
         while True:
             print("Recording...")
             chunk_file = "temp_chunk.wav"
-            recordChunk(p, stream, chunk_file)
-            transcription = transcribeChunk(model, chunk_file)
-            print(transcription)
+            recordChunk(p, stream, chunk_file)  
+            transcription = transcribeChunk(model, chunk_file)  
+            print(f"Transcription: {transcription}")
             with open('transcription.txt', 'a') as file:
                 if transcription != "" and transcription != " Thank you for watching!" and transcription != " Thanks for watching!":
                     file.write(transcription + "\n") 
             os.remove(chunk_file)
-    except KeyboardInterrupt: #ctrl + c
+            print(f"Removed temporary file {chunk_file}")
+    except KeyboardInterrupt:  # ctrl + c
         print("stopping...")
 
     finally:
         stream.stop_stream()
         stream.close()
         p.terminate()
+
+if __name__ == "__main__":
+    main2()
