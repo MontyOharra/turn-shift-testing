@@ -40,6 +40,7 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+google_cloud_transcription/google_api.json
 
 # Installer logs
 pip-log.txt
