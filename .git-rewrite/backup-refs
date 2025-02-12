@@ -1,0 +1,6 @@
+9d4ed9229d55e573e3d3065c831a6b3227d9990b commit	refs/heads/faster-whisper-testing
+a2a3362c4f4f7f2d41e8c018b562f85c0df332c2 commit	refs/heads/main
+2b0fc25c77c58bde5b8364406d55109b55166ea6 commit	refs/heads/real-whisper
+a2a3362c4f4f7f2d41e8c018b562f85c0df332c2 commit	refs/remotes/origin/main
+2b0fc25c77c58bde5b8364406d55109b55166ea6 commit	refs/remotes/origin/real-whisper
+2d9d280c7f074780104060131748cdc2e9ca1065 commit	refs/stash
