@@ -11,6 +11,7 @@ init: clean
 
 # Install the required packages
 install: init
+	conda run -p $(ENV_DIR) conda install -c conda-forge pyaudio alsa-lib alsa-plugins
 	conda run -p $(ENV_DIR) conda install nvidia::libcublas -y
 	conda run -p $(ENV_DIR) conda install cudatoolkit cudnn -y
 	conda run -p $(ENV_DIR) $(PIP) install -r requirements.txt
@@ -20,5 +21,8 @@ clean:
 	rm -rf $(ENV_DIR)
 
 
-run-test:
-	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m test
+run-transcribe:
+	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.transcribe_audio
+
+run-record:
+	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.record_audio
