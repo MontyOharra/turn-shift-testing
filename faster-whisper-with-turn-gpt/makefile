@@ -17,7 +17,7 @@ DATASETS_REPO_LINK = https://github.com/ErikEkstedt/datasets_turntaking.git
 # Create a new conda environment in folder $(ENV_DIR).
 # Remove TurnGPT if it exists, clone the repo, and clone the datasets_turntaking repo.   
 init: 
-	conda create -p $(ENV_DIR) python=3 -y
+	conda create -p $(ENV_DIR) python=3.9 -y
 	rm -rf $(TURN_GPT) && \
 	git clone $(TURN_GPT_REPO_LINK) && \
 	cd $(TURN_GPT)/ && \
@@ -27,7 +27,8 @@ init:
 # Install the required packages, The first line are root-dependencies.
 # All other dependencies are found in $(TURN_GPT)/requirements.txt and datasets_turntaking/requirements.txt
 install: init
-	conda run -p $(ENV_DIR) conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c conda-forge pyaudio alsa-lib alsa-plugins pytorch -y
+	conda run -p $(ENV_DIR) conda install -c conda-forge pyaudio alsa-lib alsa-plugins
+	conda run -p $(ENV_DIR) conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
 	conda run -p $(ENV_DIR) conda install nvidia::libcublas -y
 	conda run -p $(ENV_DIR) conda install cudatoolkit cudnn -y
 	conda run -p $(ENV_DIR) $(PIP) install -r requirements.txt
@@ -47,5 +48,5 @@ clean:
 	rm -rf $(ENV_DIR)
 
 # Run test.py in the environment. 
-run-test:
-	conda run -p $(ENV_DIR) $(PYTHON) -u -m test
+run-transcribe:
+	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.transcribe_audio
