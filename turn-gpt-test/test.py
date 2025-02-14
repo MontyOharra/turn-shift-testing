@@ -1,15 +1,34 @@
-from turngpt import TurnGPT
+from turngpt.model import TurnGPT
 import torch
 import matplotlib.pyplot as plt
+from argparse import ArgumentParser
 
-import matplotlib
 # Enable interactive mode
 plt.ion()
 
 # Fresh Initialization
-# Default values are used, so gpt2.0 is the pretrained model
 def main():
-    model = TurnGPT()
+    parser = ArgumentParser()
+
+    # Add model-specific arguments
+    parser = TurnGPT.add_model_specific_args(parser)
+    args = parser.parse_args()
+
+    # Initialize the model
+    model = TurnGPT(
+        pretrained_model_name_or_path=args.pretrained_model_name_or_path,
+        trp_projection_steps=args.trp_projection_steps,
+        trp_projection_type=args.trp_projection_type,
+        weight_loss=args.weight_loss,
+        weight_eos_token=args.weight_eos_token,
+        weight_regular_token=args.weight_regular_token,
+        learning_rate=args.learning_rate,
+        dropout=args.dropout,
+        pretrained=args.pretrained,
+        no_train_first_n=args.no_train_first_n,
+        omit_dialog_states=args.omit_dialog_states,
+    )
+
 
     model.init_tokenizer()
     model.initialize_special_embeddings()
