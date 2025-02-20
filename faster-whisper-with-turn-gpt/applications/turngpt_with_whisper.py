@@ -1,5 +1,5 @@
 import pyaudio
-from src.utils import getAudioTranscription, printTranscription
+from src.utils import getAudioTranscription, calculateTurnShiftFromTranscription
 from threading import Thread
 from queue import Queue
 
@@ -20,7 +20,7 @@ def main():
     )
 
     outputTranscription = Thread(
-        target=printTranscription,
+        target=calculateTurnShiftFromTranscription,
         args=(turnGptQueue,),
         daemon=False
     )

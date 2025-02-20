@@ -1,10 +1,11 @@
 import pyaudio
-import wave
-import pyaudio
 import os
 import tempfile
-from faster_whisper import WhisperModel
+import wave
 
+from queue import Queue, Empty
+from faster_whisper import WhisperModel
+from typing import Optional
 
 def transcribeChunk(model, file_path):
     segments, info = model.transcribe(file_path, beam_size=7)
@@ -31,13 +32,15 @@ def recordChunk(p,
     wf.writeframes(b''.join(frames))
     wf.close()
 
-def printLiveTranscription(
-    input_device_index,
-    channels=1,
-    chunk_size=1024,
-    segment_duration=2,   # seconds per segment for transcription
-    overlap_duration=0.5,   # seconds to overlap between segments
-    rate=None
+
+def getAudioTranscription(
+    liveTranscription : Queue,
+    input_device_index : int,
+    channels : int = 1,
+    chunk_size : int =1024,
+    segment_duration : float = 2,   # seconds per segment for transcription
+    overlap_duration : float = 0.5,   # seconds to overlap between segments
+    rate : Optional[int] = None
 ):
     
     model = WhisperModel(model_size_or_path="medium.en", device="cuda", compute_type="float16")
@@ -64,6 +67,7 @@ def printLiveTranscription(
 
     audio_buffer = []  # will hold the incoming audio chunks
 
+    print("Recording continuously (press Ctrl+C to stop)...")
     try:
         while True:
             # Read one chunk from the stream.
@@ -84,7 +88,7 @@ def printLiveTranscription(
 
                 # Transcribe the temporary file.
                 transcription = transcribeChunk(model, tmp_filename)
-                print(transcription)
+                liveTranscription.put(transcription)
 
                 # Remove the temporary file.
                 os.remove(tmp_filename)
@@ -92,9 +96,41 @@ def printLiveTranscription(
                 # Keep only the last N frames (the overlap) for the next segment.
                 audio_buffer = audio_buffer[-frames_per_overlap:]
     except KeyboardInterrupt:
-        pass
+        print("Stopping continuous transcription...")
     finally:
-        os.remove()
+        os.remove(tmp_filename)
         stream.stop_stream()
         stream.close()
         p.terminate()
+
+
+def printTranscription(liveTranscription : Queue):
+    while True:
+        try:
+            message = liveTranscription.get(timeout=1)
+
+        except Empty:
+            continue
+
+        if message == None:
+            break  
+        print(liveTranscription.get())
+
+
+def calculateTurnShiftFromTranscription(
+    liveTranscription : Queue,
+):
+    currTranscription = []
+    while True:
+        try:
+            message = liveTranscription.get(timeout=1)
+
+        except Empty:
+            continue
+
+        if message == None:
+            break  
+    
+        currTranscription.append(message)
+
+    print(currTranscription)
