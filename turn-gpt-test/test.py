@@ -39,18 +39,21 @@ def main():
         "I'm good, how about you?",
         "Not bad, just busy with work."
     ]
+    
+    full_turn_list = "Hi, how are you? I'm good, how about you? Not bad, just busy with work. Damn dude, that sucks. You should just quit your job, become homeless, and do lots of fent instead."
 
-    out = model.string_list_to_trp(simple_turn_list)
+    out = model.string_list_to_trp(full_turn_list)
     print("TRP for simple example:", out["trp_probs"])
-
-
+    for prob in out["trp_probs"][0]:
+        prob*=10
+    
     def plot_trp(P, text):
         fig, ax = plt.subplots(1, 1)
         x = torch.arange(len(P))
         ax.bar(x, P)
         ax.set_xticks(x)
         ax.set_xticklabels(text, rotation=60)
-        ax.set_ylim([0, 1])
+        ax.set_ylim([0, 1]) # type: ignore
         fig.savefig("output.png")  # Save the figure instead of displaying it
         return fig, ax
 

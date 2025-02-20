@@ -1,7 +1,6 @@
 import pyaudio
 import wave
 
-
 def transcribeChunk(model, file_path):
     segments, info = model.transcribe(file_path, beam_size=7)
     transcription = ' '.join(segment.text for segment in segments)

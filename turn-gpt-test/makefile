@@ -43,4 +43,5 @@ clean:
 
 # Run test.py in the environment. 
 run-test:
+	rm -rf output.png
 	conda run -p $(ENV_DIR) $(PYTHON) -u -m test
