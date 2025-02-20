@@ -70,7 +70,7 @@ def transcribe_audio_continuous(
     except KeyboardInterrupt:
         print("Stopping continuous transcription...")
     finally:
-        os.remove()
+        os.remove(tmp_filename)
         stream.stop_stream()
         stream.close()
         p.terminate()
