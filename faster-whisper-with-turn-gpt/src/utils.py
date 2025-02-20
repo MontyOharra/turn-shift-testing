@@ -2,7 +2,9 @@ import pyaudio
 import os
 import tempfile
 import wave
-
+import torch
+import matplotlib.pyplot as plt
+from turngpt.model import TurnGPT
 from queue import Queue, Empty
 from faster_whisper import WhisperModel
 from typing import Optional
@@ -117,20 +119,77 @@ def printTranscription(liveTranscription : Queue):
         print(liveTranscription.get())
 
 
-def calculateTurnShiftFromTranscription(
-    liveTranscription : Queue,
-):
-    currTranscription = []
-    while True:
-        try:
-            message = liveTranscription.get(timeout=1)
+plt.ion()
 
-        except Empty:
-            continue
+# Initialize the TurnGPT model
+def initialize_turngpt_model():
+    # Argument parser setup, would normally be done outside the loop
+    from argparse import ArgumentParser
+    parser = ArgumentParser()
+    parser = TurnGPT.add_model_specific_args(parser)
+    args = parser.parse_args()
 
-        if message == None:
-            break  
+    # Initialize model
+    model = TurnGPT(
+        pretrained_model_name_or_path=args.pretrained_model_name_or_path,
+        trp_projection_steps=args.trp_projection_steps,
+        trp_projection_type=args.trp_projection_type,
+        weight_loss=args.weight_loss,
+        weight_eos_token=args.weight_eos_token,
+        weight_regular_token=args.weight_regular_token,
+        learning_rate=args.learning_rate,
+        dropout=args.dropout,
+        pretrained=args.pretrained,
+        no_train_first_n=args.no_train_first_n,
+        omit_dialog_states=args.omit_dialog_states,
+    )
+
+    model.init_tokenizer()
+    model.initialize_special_embeddings()
     
-        currTranscription.append(message)
+    return model
 
-    print(currTranscription)
+def plot_trp(P, text):
+    fig, ax = plt.subplots(1, 1)
+    x = torch.arange(len(P))
+    ax.bar(x, P)
+    ax.set_xticks(x)
+    ax.set_xticklabels(text, rotation=60)
+    ax.set_ylim([0, 1])  # type: ignore
+    fig.savefig("output.png")  # Save the figure instead of displaying it
+    return fig, ax
+
+def calculateTurnShiftFromTranscription(liveTranscription : Queue,):
+    model = initialize_turngpt_model()
+    currTranscription = []
+    with open('transcription_and_turngpt_output.txt', 'w') as output_file:
+        while True:
+            try:
+                message = liveTranscription.get(timeout=1)
+            except Empty:
+                continue  # If queue is empty, continue waiting for new messages
+
+            if message is None:  # If we receive None, stop processing
+                break
+
+            currTranscription.append(message)  # Append the message to the current transcription list
+
+            # Now use the transcribed text in currTranscription to generate the turn shift prediction
+            full_turn_list = " ".join(currTranscription)  # Combine the list of transcriptions into one string
+            
+            # Process the transcribed text with TurnGPT
+            out = model.string_list_to_trp(full_turn_list)
+            print("TRP for transcribed example:", out["trp_probs"])
+
+            for prob in out["trp_probs"][0]:
+                prob *= 10  # Adjusting the probabilities for visualization
+
+            # Write transcriptions and TurnGPT outputs to the file
+            output_file.write("Transcription: " + full_turn_list + "\n")
+            output_file.write("TurnGPT Output (TRP Probs): " + str(out["trp_probs"]) + "\n\n")
+
+            # Optionally, plot the TRP probabilities
+            fig, ax = plot_trp(out["trp_probs"][0], out["tokens"][0])
+
+    print("Final transcription: ", currTranscription)
+    print("All output has been written to 'transcription_and_turngpt_output.txt'.")

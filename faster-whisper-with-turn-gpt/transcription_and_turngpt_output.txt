@@ -1,0 +1,98 @@
+Transcription:  Yeah bro, let's see if it works first.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.  I'm also doing good.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115, 0.0106, 0.0037, 0.0051, 0.0045, 0.0050]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.  I'm also doing good.  The weather's really nice today.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115, 0.0106, 0.0037, 0.0051, 0.0045, 0.0050, 0.0022, 0.0145,
+         0.0084, 0.0060, 0.0107, 0.0172]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.  I'm also doing good.  The weather's really nice today.  Yeah, it is pretty nice.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115, 0.0106, 0.0037, 0.0051, 0.0045, 0.0050, 0.0022, 0.0145,
+         0.0084, 0.0060, 0.0107, 0.0172, 0.0090, 0.0066, 0.0026, 0.0042, 0.0058]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.  I'm also doing good.  The weather's really nice today.  Yeah, it is pretty nice.  I really like the Sun
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115, 0.0106, 0.0037, 0.0051, 0.0045, 0.0050, 0.0022, 0.0145,
+         0.0084, 0.0060, 0.0107, 0.0172, 0.0090, 0.0066, 0.0026, 0.0042, 0.0058,
+         0.0020, 0.0026, 0.0044, 0.0006, 0.0107]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.  I'm also doing good.  The weather's really nice today.  Yeah, it is pretty nice.  I really like the Sun  Me too bro.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115, 0.0106, 0.0037, 0.0051, 0.0045, 0.0050, 0.0022, 0.0145,
+         0.0084, 0.0060, 0.0107, 0.0172, 0.0090, 0.0066, 0.0026, 0.0042, 0.0058,
+         0.0020, 0.0026, 0.0044, 0.0006, 0.0107, 0.0068, 0.0081, 0.0101]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.  I'm also doing good.  The weather's really nice today.  Yeah, it is pretty nice.  I really like the Sun  Me too bro.  Thanks for watching!
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115, 0.0106, 0.0037, 0.0051, 0.0045, 0.0050, 0.0022, 0.0145,
+         0.0084, 0.0060, 0.0107, 0.0172, 0.0090, 0.0066, 0.0026, 0.0042, 0.0058,
+         0.0020, 0.0026, 0.0044, 0.0006, 0.0107, 0.0068, 0.0081, 0.0101, 0.0187,
+         0.0049, 0.0183]])
+
+Transcription:  Yeah bro, let's see if it works first.  Hey my name is Jay  How are you doing today?  Oh hi Jay, I'm doing great.  great. How about yourself?  Thank you very much.  Thank you.  I'm also doing good.  The weather's really nice today.  Yeah, it is pretty nice.  I really like the Sun  Me too bro.  Thanks for watching!  Thank you.
+TurnGPT Output (TRP Probs): tensor([[0.1124, 0.4735, 0.0010, 0.0021, 0.0601, 0.0036, 0.0025, 0.2075, 0.2441,
+         0.0424, 0.0260, 0.0811, 0.0119, 0.0092, 0.0781, 0.0236, 0.0211, 0.0688,
+         0.0985, 0.1905, 0.0289, 0.0364, 0.0016, 0.0315, 0.0131, 0.0081, 0.0159,
+         0.0333, 0.0385, 0.0204, 0.0157, 0.0143, 0.0130, 0.0319, 0.0148, 0.0079,
+         0.0093, 0.0115, 0.0106, 0.0037, 0.0051, 0.0045, 0.0050, 0.0022, 0.0145,
+         0.0084, 0.0060, 0.0107, 0.0172, 0.0090, 0.0066, 0.0026, 0.0042, 0.0058,
+         0.0020, 0.0026, 0.0044, 0.0006, 0.0107, 0.0068, 0.0081, 0.0101, 0.0187,
+         0.0049, 0.0183, 0.0104, 0.0076]])
+
