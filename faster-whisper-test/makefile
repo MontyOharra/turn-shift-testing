@@ -1,26 +1,6 @@
-OSTYPE :=
-ifeq ($(OS),Windows_NT)
-	OSTYPE := Windows
-else
-	UNAME_S := $(shell uname -s)
-	ifeq ($(UNAME_S),Linux)
-		OSTYPE := Linux
-	endif
-	ifeq ($(UNAME_S),Darwin)
-		OSTYPE := MacOS
-	endif
-endif
-
-PYAUDIO_LIBS := 
-ifeq ($(OSTYPE),Windows)
-	PYAUDIO_INSTALL_COMMAND := python -m pip install pyaudio
-	CUBLAS_INSTALL_COMMAND := conda install nvidia::libcublas -y
-	CUDNN_INSTALL_COMMAND := conda install -c nvidia cudatoolkit cudnn -y
-else
-	PYAUDIO_INSTALL_COMMAND := conda install pyaudio alsa-lib alsa-plugins -y
-	CUBLAS_INSTALL_COMMAND := conda install nvidia::libcublas -y
-	CUDNN_INSTALL_COMMAND := conda install cudatoolkit cudnn -y
-endif
+PYAUDIO_INSTALL_COMMAND := conda install pyaudio alsa-lib alsa-plugins -y
+CUBLAS_INSTALL_COMMAND := conda install nvidia::libcublas -y
+CUDNN_INSTALL_COMMAND := conda install cudatoolkit cudnn -y
 
 # Folder-based conda environment, created in .venv
 ENV_DIR = .venv

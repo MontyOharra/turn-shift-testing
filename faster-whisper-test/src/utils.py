@@ -3,8 +3,10 @@ import os
 import tempfile
 import wave
 
-from threading import Queue, Empty
+from queue import Queue
 from faster_whisper import WhisperModel
+from typing import Optional
+import threading
 
 def transcribeChunk(model, file_path):
     segments, info = model.transcribe(file_path, beam_size=7)
@@ -19,6 +21,10 @@ def recordChunk(p,
                 file_path, 
                 chunk_size,
                 chunk_length=1):
+    """
+    (This is not used in the continuous-transcription approach in getAudioTranscription,
+     but can be used for single-chunk capture.)
+    """
     frames = []
     for _ in range(0, int(rate / chunk_size * chunk_length)):
         data = stream.read(chunk_size, exception_on_overflow=False)
@@ -34,14 +40,19 @@ def recordChunk(p,
 
 def getAudioTranscription(
     liveTranscription : Queue,
+    stop_event : threading.Event,
     input_device_index : int,
     channels : int = 1,
-    chunk_size : int =1024,
-    segment_duration : float = 2,   # seconds per segment for transcription
+    chunk_size : int = 1024,
+    segment_duration : float = 2.0,   # seconds per segment for transcription
     overlap_duration : float = 0.5,   # seconds to overlap between segments
-    rate : int | None = None
+    rate : Optional[int] = None
 ):
-    
+    """
+    Continuously record audio, transcribe in chunks, and put the transcription
+    in liveTranscription queue. Will exit gracefully if stop_event is set.
+    """
+
     model = WhisperModel(model_size_or_path="medium.en", device="cuda", compute_type="float16")
     
     p = pyaudio.PyAudio()
@@ -65,10 +76,11 @@ def getAudioTranscription(
     frames_per_overlap = int(rate / chunk_size * overlap_duration)
 
     audio_buffer = []  # will hold the incoming audio chunks
+    tmp_filename = None
 
     print("Recording continuously (press Ctrl+C to stop)...")
     try:
-        while True:
+        while not stop_event.is_set():
             # Read one chunk from the stream.
             data = stream.read(chunk_size, exception_on_overflow=False)
             audio_buffer.append(data)
@@ -78,12 +90,12 @@ def getAudioTranscription(
                 # Write the current buffer to a temporary WAV file.
                 with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmpfile:
                     tmp_filename = tmpfile.name
-                    wf = wave.open(tmp_filename, 'wb')
-                    wf.setnchannels(channels)
-                    wf.setsampwidth(p.get_sample_size(default_format))
-                    wf.setframerate(rate)
-                    wf.writeframes(b''.join(audio_buffer))
-                    wf.close()
+                wf = wave.open(tmp_filename, 'wb')
+                wf.setnchannels(channels)
+                wf.setsampwidth(p.get_sample_size(default_format))
+                wf.setframerate(rate)
+                wf.writeframes(b''.join(audio_buffer))
+                wf.close()
 
                 # Transcribe the temporary file.
                 transcription = transcribeChunk(model, tmp_filename)
@@ -94,42 +106,26 @@ def getAudioTranscription(
 
                 # Keep only the last N frames (the overlap) for the next segment.
                 audio_buffer = audio_buffer[-frames_per_overlap:]
-    except KeyboardInterrupt:
-        print("Stopping continuous transcription...")
+
     finally:
-        os.remove(tmp_filename)
+        # Cleanup
+        if tmp_filename and os.path.exists(tmp_filename):
+            os.remove(tmp_filename)
+
         stream.stop_stream()
         stream.close()
         p.terminate()
+        print("Stopped continuous transcription thread.")
 
 
 def printTranscription(liveTranscription : Queue):
+    """
+    Continuously read from liveTranscription queue and print.
+    Exits when it reads a None sentinel.
+    """
     while True:
-        try:
-            message = liveTranscription.get(timeout=1)
-
-        except Empty:
-            continue
-
-        if message == None:
-            break  
-        print(liveTranscription.get())
-
-
-def calculateTurnShiftFromTranscription(
-    liveTranscription : Queue,
-):
-    currTranscription = []
-    while True:
-        try:
-            message = liveTranscription.get(timeout=1)
-
-        except Empty:
-            continue
-
-        if message == None:
-            break  
-    
-        currTranscription.append(message)
-
-    print(currTranscription)
+        item = liveTranscription.get()
+        if item is None:
+            break
+        print(item)
+    print("Stopped printing thread.")
