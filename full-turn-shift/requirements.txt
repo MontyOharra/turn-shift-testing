@@ -1,6 +1,7 @@
 faster_whisper
 pyaudio
 torch
+pydub
 matplotlib
 soundfile==0.12.1
 torchaudio

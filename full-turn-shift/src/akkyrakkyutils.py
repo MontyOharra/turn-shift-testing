@@ -8,6 +8,34 @@ from turngpt.model import TurnGPT
 from queue import Queue, Empty
 from faster_whisper import WhisperModel
 from typing import Optional
+import json
+from pydub import AudioSegment
+from VoiceActivityProjection import run2
+import utils  # Assuming utility functions are available in the utils module
+import record_audio  # Importing the record_audio module
+
+# Helper function to combine two WAV files
+def combine_wav(file1, file2, output_filename="output.wav", max_duration_ms=2 * 60 * 1000):
+    audio1 = AudioSegment.from_wav(file1)
+    audio2 = AudioSegment.from_wav(file2)
+    
+    # Combine the two audio segments
+    combined_audio = audio1 + audio2
+    
+    # If combined audio exceeds max duration, truncate it
+    if len(combined_audio) > max_duration_ms:
+        combined_audio = combined_audio[-max_duration_ms:]
+    
+    combined_audio.export(output_filename, format="wav")
+    print(f"Audio saved to {output_filename}. Total duration: {len(combined_audio) / 1000:.2f} seconds.")
+
+# Helper function to extract probabilities from JSON file
+def getPnowPfuture(json_file):
+    with open(json_file) as f:
+        data = json.load(f)
+    pnow = data['p_now'][-1][0]  # Extract latest 'p_now' value
+    pfuture = data['p_future'][-1][0]  # Extract latest 'p_future' value
+    return pnow, pfuture
 
 def transcribeChunk(model, file_path):
     segments, info = model.transcribe(file_path, beam_size=7)
@@ -194,3 +222,79 @@ def calculateTurnShiftFromTranscription(liveTranscription : Queue,):
     print("Final transcription: ", currTranscription)
     print("All output has been written to 'transcription_and_turngpt_output.txt'.")
 
+def plot_trp(trp_probs, tokens):
+    fig, ax = plt.subplots()
+    ax.plot(tokens, trp_probs, label="TRP Probabilities")
+    ax.set_xlabel("Tokens")
+    ax.set_ylabel("Probability")
+    ax.set_title("TRP Probabilities over Tokens")
+    ax.legend()
+    plt.show()
+
+def turnShiftAndVap(liveTranscription: Queue):
+    turnGPT_model = initialize_turngpt_model()
+    whisper_model = WhisperModel(model_size_or_path="medium.en", device="cuda", compute_type="float16")
+    currTranscription = []
+    
+    # Open the output file where we will write the results
+    with open('transcription_and_turngpt_output.txt', 'w') as output_file:
+        while True:
+            try:
+                message = liveTranscription.get(timeout=1)
+            except Empty:
+                continue  # If queue is empty, continue waiting for new messages
+
+            if message is None:  # If we receive None, stop processing
+                break
+
+            currTranscription.append(message)  # Append the message to the current transcription list
+
+            # Now use the transcribed text in currTranscription to generate the turn shift prediction
+            full_turn_list = " ".join(currTranscription)  # Combine the list of transcriptions into one string
+            
+            # Process the transcribed text with TurnGPT
+            out = turnGPT_model.string_list_to_trp(full_turn_list)
+            print("TRP for transcribed example:", out["trp_probs"])
+
+            for prob in out["trp_probs"][0]:
+                prob *= 10  # Adjusting the probabilities for visualization
+
+            # Write transcriptions and TurnGPT outputs to the file
+            output_file.write("Transcription: " + full_turn_list + "\n")
+            output_file.write("TurnGPT Output (TRP Probs): " + str(out["trp_probs"]) + "\n\n")
+
+            # Optionally, plot the TRP probabilities
+            fig, ax = plot_trp(out["trp_probs"][0], out["tokens"][0])
+
+            # Record a short audio chunk (e.g., 0.25 seconds)
+            record_audio.record_audio(
+                output_filename="chunk.wav",  # Output file name
+                record_seconds=.25,           # Duration to record in seconds
+                rate=48000,                  # Sample rate (48000 Hz)
+                chunk=1024,                  # Chunk size for audio processing
+                channels=1,                  # Number of audio channels (1 = mono)
+                input_device_index=0,        # Index for the input device (set to an integer for a specific mic)
+            )
+
+            # Combine the recorded chunk with the existing audio output (e.g., 'output.wav')
+            combine_wav('output.wav', 'chunk.wav')
+            
+            # If the combined audio is longer than 5 seconds, process it
+            if AudioSegment.from_wav('output.wav').duration_seconds > 5:
+                # Run voice activity projection (likely identifying voice activity)
+                VoiceActivityProjection.run2.runVAP(output_filename="output.wav", output_json="test.json")
+                
+                # Get current and future probabilities from the generated JSON file
+                pnow, pfuture = getPnowPfuture("test.json")
+                
+                # Print the probabilities for debugging purposes
+                print("pnow: ", pnow)
+                print("pfuture: ", pfuture)
+
+                # Check the probabilities and print if certain thresholds are met
+                if(pnow < .4 and pfuture < .4):
+                    print("Turn detected")
+
+    # Final output after processing
+    print("Final transcription: ", currTranscription)
+    print("All output has been written to 'transcription_and_turngpt_output.txt'.")

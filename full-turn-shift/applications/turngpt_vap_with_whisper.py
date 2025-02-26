@@ -1,5 +1,6 @@
-import pyaudio
+# import pyaudio
 from src.utils import getAudioTranscription, printTranscription, calculateTurnShiftFromTranscription
+from pydub import AudioSegment
 from threading import Thread
 from queue import Queue
 

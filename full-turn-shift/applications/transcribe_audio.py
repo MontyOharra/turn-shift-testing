@@ -1,4 +1,4 @@
-import pyaudio
+# import pyaudio
 from src.utils import getAudioTranscription, printTranscription
 from threading import Thread
 from queue import Queue

@@ -41,6 +41,8 @@ DATASETS_REPO_LINK = https://github.com/ErikEkstedt/datasets_turntaking.git
 VAP = VoiceActivityProjection
 VAP_REPO_LINK = https://github.com/ErikEkstedt/VoiceActivityProjection.git
 
+.PHONY: init install fix-turngpt clean run
+
 # Create a new conda environment in folder $(ENV_DIR).
 # Remove TurnGPT if it exists, clone the repo, and clone the datasets_turntaking repo. 
 # Similarly for VAP.  
