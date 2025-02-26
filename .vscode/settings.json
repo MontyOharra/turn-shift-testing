@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./turn-gpt-test/TurnGPT"
+    ]
+}

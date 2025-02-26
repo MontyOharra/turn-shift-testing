@@ -27,14 +27,12 @@ init:
 # Install the required packages, The first line are root-dependencies.
 # All other dependencies are found in $(TURN_GPT)/requirements.txt and datasets_turntaking/requirements.txt
 install: init
-	conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+	conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -y
+	conda run -p $(ENV_DIR) $(PIP) install -r requirements.txt
 	conda run -p $(ENV_DIR) $(PIP) install -r $(TURN_GPT)/requirements.txt
 	conda run -p $(ENV_DIR) $(PIP) install -r $(TURN_GPT)/$(TURN_GPT_DATASETS)/requirements.txt
 	conda run -p $(ENV_DIR) $(PIP) install -e $(TURN_GPT)/$(TURN_GPT_DATASETS)/
 	conda run -p $(ENV_DIR) $(PIP) install -e $(TURN_GPT)/
-
-# Alter line that throws the error in TurnGPT/turngpt/model.py
-fix-turngpt:
 	sed -i '71s/s\.strip()/[s.strip()]/' $(TURN_GPT)/turngpt/model.py
 
 
@@ -45,4 +43,5 @@ clean:
 
 # Run test.py in the environment. 
 run-test:
+	rm -rf output.png
 	conda run -p $(ENV_DIR) $(PYTHON) -u -m test
