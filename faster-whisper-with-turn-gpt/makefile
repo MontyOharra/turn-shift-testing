@@ -87,3 +87,6 @@ turngpt-test:
 
 turngpt-with-whisper:
 	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.turngpt_with_whisper
+
+turngpt-vap-with-whisper:
+	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.turngpt_vap_with_whisper

@@ -45,16 +45,18 @@ if __name__ == "__main__":
                 file_path="output.wav"
             )
             print("Transcription: ", transcription)
-            VoiceActivityProjection.run2.runVAP()
+            VoiceActivityProjection.run2.runVAP(output_filename="output.wav", output_json="test.json")    
             pnow, pfuture = getPnowPfuture("test.json")
             print("pnow: ", pnow)
             print("pfuture: ", pfuture)
             # TurnGPTTest.main()
             # TurnGPTTest.onInput(transcription)
-            if(pnow[0] > .6 & pfuture[0] > .6):
+            if(pnow[0] < .4 and pfuture[0] < .4):
                 print("Turn detected")
 
     except KeyboardInterrupt:
+        os.remove("output.wav")
+        os.remove("test.json")
         print("\nLoop interrupted by user.")
     
 

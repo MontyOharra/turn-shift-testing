@@ -2,92 +2,89 @@ import pyaudio
 import wave
 import json
 import VoiceActivityProjection.run2
+from faster_whisper import WhisperModel
+from pydub import AudioSegment
+
+import sys
+import os
+
+sys.path.append(os.path.abspath("/home/bwilab/turn-shift/faster-whisper-with-turn-gpt/applications"))
+import record_audio
+
+sys.path.append(os.path.abspath("/home/bwilab/turn-shift/faster-whisper-with-turn-gpt/src"))
+import utils
+
+sys.path.append(os.path.abspath("/home/bwilab/turn-shift/turn-gpt-test"))
+import test as TurnGPTTest
+
+whisper_model = WhisperModel(model_size_or_path="medium.en", device="cuda", compute_type="float16")
 
 def getPnowPfuture(json_file):
     with open(json_file) as f:
         data = json.load(f)
     pnow = data['p_now']
     pnow = pnow[-1]
-    pnow = pnow[0]
+    pnow = pnow[0]    
     pfuture = data['p_future']
     pfuture = pfuture[-1]
     pfuture = pfuture[0]
     return pnow, pfuture
 
-def record_audio(
-    output_filename="output.wav",
-    record_seconds=5,
-    rate=16000,
-    chunk=1024,
-    channels=1,
-    input_device_index=None,
-):
-    """
-    Records audio for `record_seconds` and saves it to `output_filename`.
+def create_empty_wav(filename='output.wav', num_channels=1, sample_width=2, frame_rate=48000, num_frames=0):
+    with wave.open(filename, 'wb') as wav_file:
+        wav_file.setnchannels(num_channels)  
+        wav_file.setsampwidth(sample_width)
+        wav_file.setframerate(frame_rate)    
+        wav_file.setnframes(num_frames)   
+        wav_file.writeframes(b'')
+
+create_empty_wav('output.wav')
+
+def combine_wav(file1, file2, output_filename="output.wav", max_duration_ms=2 * 60 * 1000):
+    # Load the audio files
+    audio1 = AudioSegment.from_wav(file1)
+    audio2 = AudioSegment.from_wav(file2)
     
-    :param output_filename: Name of the WAV file to save (e.g. "output.wav").
-    :param record_seconds: Number of seconds to record.
-    :param rate: Sample rate in Hz.
-    :param chunk: Buffer size; number of frames per buffer.
-    :param channels: Number of audio channels.
-    :param input_device_index: (Optional) Device index if you want a specific input device.
-    """
-
-    p = pyaudio.PyAudio()
-
-    # Print available input devices (for debugging)
-    print("Available devices:")
-    for i in range(p.get_device_count()):
-        dev_info = p.get_device_info_by_index(i)
-        max_in_channels = dev_info.get('maxInputChannels', 0)
-        print(f"  Device {i}: {dev_info['name']} (max input channels = {max_in_channels})")
-
-    # Open the audio stream
-    stream = p.open(
-        format=pyaudio.paInt16,
-        channels=channels,
-        rate=rate,
-        input=True,
-        frames_per_buffer=chunk,
-        input_device_index=input_device_index,
-    )
-
-    print(f"\nRecording for {record_seconds} seconds...")
-
-    frames = []
-    for _ in range(int(rate / chunk * record_seconds)):
-        data = stream.read(chunk, exception_on_overflow=False)
-        frames.append(data)
-
-    print("Finished recording!")
-
-    # Stop and close the stream
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
-
-    # Save the recorded data to a WAV file
-    wf = wave.open(output_filename, 'wb')
-    wf.setnchannels(channels)
-    wf.setsampwidth(p.get_sample_size(pyaudio.paInt16))
-    wf.setframerate(rate)
-    wf.writeframes(b''.join(frames))
-    wf.close()
-
-    print(f"Saved to {output_filename}")
+    # Append the two audio segments
+    combined_audio = audio1 + audio2
+    
+    if len(combined_audio) > max_duration_ms:
+        combined_audio = combined_audio[-max_duration_ms:]
+    
+    combined_audio.export(output_filename, format="wav")
+    
+    print(f"Audio saved to {output_filename}. Total duration: {len(combined_audio) / 1000:.2f} seconds.")
 
 
 if __name__ == "__main__":
-    record_audio(
-        output_filename="output.wav",
-        record_seconds=5,         # Adjust as desired
-        rate=48000,               # Common sample rate
-        chunk=1024,
-        channels=1,
-        input_device_index=0,  # Set to an integer if you want a specific mic
-    )
-    #VoiceActivityProjection.run2.runVAP("-a output.wav", "-sd VoiceActivityProjection/example/VAP_3mmz3t0u_50Hz_ad20s_134-epoch9-val_2.56.pt", "-f test.json")
-    VoiceActivityProjection.run2.runVAP()
-    pnow, pfuture = getPnowPfuture("test.json")
-    print("pnow: ", pnow)
-    print("pfuture: ", pfuture)
+    try:
+        while True:
+            record_audio.record_audio(
+                output_filename="chunk.wav",
+                record_seconds=.25,         # adjust this -- lower for more "live" predictions but this interferes with transcription (repeated segments/words)
+                rate=48000,               # Common sample rate
+                chunk=1024,
+                channels=1,
+                input_device_index=0,  # Set to an integer if you want a specific mic
+            )
+            combine_wav('output.wav', 'chunk.wav')
+            if AudioSegment.from_wav('output.wav').duration_seconds > 5:
+                VoiceActivityProjection.run2.runVAP(output_filename="output.wav", output_json="test.json")    
+                pnow, pfuture = getPnowPfuture("test.json")
+                print("pnow: ", pnow)
+                print("pfuture: ", pfuture)
+                # TurnGPTTest.main()
+                # TurnGPTTest.onInput(transcription)
+                if(pnow[0] < .4 and pfuture[0] < .4):
+                    print("Turn detected")
+
+    except KeyboardInterrupt:
+        transcription = utils.transcribeChunk(
+                model=whisper_model,
+                file_path="output.wav"
+            )
+        print("Transcription: ", transcription)
+        os.remove("output.wav")
+        os.remove("test.json")
+        print("\nLoop interrupted by user.")
+    
