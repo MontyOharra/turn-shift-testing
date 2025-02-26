@@ -38,13 +38,16 @@ TURN_GPT = TurnGPT
 TURN_GPT_REPO_LINK = https://github.com/ErikEkstedt/TurnGPT.git
 DATASETS = datasets_turntaking
 DATASETS_REPO_LINK = https://github.com/ErikEkstedt/datasets_turntaking.git
-
-.PHONY: init install fix-turngpt clean run
+VAP = VoiceActivityProjection
+VAP_REPO_LINK = https://github.com/ErikEkstedt/VoiceActivityProjection.git
 
 # Create a new conda environment in folder $(ENV_DIR).
-# Remove TurnGPT if it exists, clone the repo, and clone the datasets_turntaking repo.   
+# Remove TurnGPT if it exists, clone the repo, and clone the datasets_turntaking repo. 
+# Similarly for VAP.  
 init: 
 	conda create -p $(ENV_DIR) python=3.9 -y
+	rm -rf $(VAP) && \
+	git clone $(VAP_REPO_LINK)
 	rm -rf $(TURN_GPT) && \
 	git clone $(TURN_GPT_REPO_LINK) && \
 	cd $(TURN_GPT)/ && \
@@ -63,10 +66,14 @@ install: init
 	conda run -p $(ENV_DIR) $(PIP) install -r $(TURN_GPT)/$(TURN_GPT_DATASETS)/requirements.txt
 	conda run -p $(ENV_DIR) $(PIP) install -e $(TURN_GPT)/$(TURN_GPT_DATASETS)/
 	conda run -p $(ENV_DIR) $(PIP) install -e $(TURN_GPT)/
+	conda run -p $(ENV_DIR) $(PIP) install -r $(VAP)/requirements.txt
+	conda run -p $(ENV_DIR) $(PIP) install -e $(VAP)/
+
 	sed -i '71s/s\.strip()/[s.strip()]/' $(TURN_GPT)/turngpt/model.py
 
 # Remove the entire environment folder and delete TurnGPT.
 clean:
+	rm -rf $(VAP)
 	rm -rf $(TURN_GPT)
 	rm -rf $(ENV_DIR)
 

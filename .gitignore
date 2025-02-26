@@ -1,6 +1,6 @@
 # Other GH Libraries
 */TurnGPT/
-vap-test/VoiceActivityProjection/
+*/VoiceActivityProjection/
 
 vap-test/*.json
 vap-test/*.png
