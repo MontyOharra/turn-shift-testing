@@ -8,32 +8,15 @@ from turngpt.model import TurnGPT
 from queue import Queue, Empty
 from faster_whisper import WhisperModel
 from typing import Optional
+from argparse import ArgumentParser
 
-def transcribeChunk(model, file_path):
+def transcribeChunk(
+        model : TurnGPT, 
+        file_path : str
+    ) -> str :
     segments, info = model.transcribe(file_path, beam_size=7)
     transcription = ' '.join(segment.text for segment in segments)
     return transcription
-
-def recordChunk(p,
-                stream, 
-                format,
-                rate,
-                channels,
-                file_path, 
-                chunk_size,
-                chunk_length=1):
-    frames = []
-    for _ in range(0, int(rate / chunk_size * chunk_length)):
-        data = stream.read(chunk_size, exception_on_overflow=False)
-        frames.append(data)
-    
-    wf = wave.open(file_path, 'wb')
-    wf.setnchannels(channels)
-    wf.setsampwidth(p.get_sample_size(format))
-    wf.setframerate(rate)
-    wf.writeframes(b''.join(frames))
-    wf.close()
-
 
 def getAudioTranscription(
     liveTranscription : Queue,
@@ -97,6 +80,7 @@ def getAudioTranscription(
 
                 # Keep only the last N frames (the overlap) for the next segment.
                 audio_buffer = audio_buffer[-frames_per_overlap:]
+                
     except KeyboardInterrupt:
         print("Stopping continuous transcription...")
     finally:
@@ -122,9 +106,8 @@ def printTranscription(liveTranscription : Queue):
 plt.ion()
 
 # Initialize the TurnGPT model
-def initialize_turngpt_model():
+def initialize_turngpt_model() -> TurnGPT:
     # Argument parser setup, would normally be done outside the loop
-    from argparse import ArgumentParser
     parser = ArgumentParser()
     parser = TurnGPT.add_model_specific_args(parser)
     args = parser.parse_args()
@@ -149,15 +132,14 @@ def initialize_turngpt_model():
     
     return model
 
-def plot_trp(P, text):
+def plot_trp(turn_shift_probs, tokens, filename="output.png"):
     fig, ax = plt.subplots(1, 1)
-    x = torch.arange(len(P))
-    ax.bar(x, P)
+    x = torch.arange(len(turn_shift_probs))
+    ax.bar(x, turn_shift_probs)
     ax.set_xticks(x)
-    ax.set_xticklabels(text, rotation=60)
+    ax.set_xticklabels(tokens, rotation=60)
     ax.set_ylim([0, 1])  # type: ignore
-    fig.savefig("output.png")  # Save the figure instead of displaying it
-    return fig, ax
+    fig.savefig(filename)  # Save the figure instead of displaying it
 
 def calculateTurnShiftFromTranscription(liveTranscription : Queue,):
     model = initialize_turngpt_model()
@@ -189,7 +171,7 @@ def calculateTurnShiftFromTranscription(liveTranscription : Queue,):
             output_file.write("TurnGPT Output (TRP Probs): " + str(out["trp_probs"]) + "\n\n")
 
             # Optionally, plot the TRP probabilities
-            fig, ax = plot_trp(out["trp_probs"][0], out["tokens"][0])
+            plot_trp(out["trp_probs"][0], out["tokens"][0])
 
     print("Final transcription: ", currTranscription)
     print("All output has been written to 'transcription_and_turngpt_output.txt'.")
