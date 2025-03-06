@@ -87,7 +87,7 @@ whisper-transcribe:
 whisper-record:
 	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.record_audio
 
-whisper-get-audio-devices:
+get-audio-devices:
 	conda run -p $(ENV_DIR) $(PYTHON) -u -m applications.get_audio_devices
 
 turngpt-test:

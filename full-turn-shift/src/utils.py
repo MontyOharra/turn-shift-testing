@@ -14,7 +14,7 @@ def transcribeChunk(
         model : TurnGPT, 
         file_path : str
     ) -> str :
-    segments, info = model.transcribe(file_path, beam_size=7)
+    segments, info = model.transcribe(file_path, beam_sizWhisperModel(model_size_or_path="medium.en", device="cuda", compute_type="float16")e=7)
     transcription = ' '.join(segment.text for segment in segments)
     return transcription
 
