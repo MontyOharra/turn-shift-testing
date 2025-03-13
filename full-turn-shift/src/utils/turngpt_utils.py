@@ -59,19 +59,25 @@ def calculate_turn_shift_from_live_transcription(
             try:
                 message = transcription.get(timeout=1)
             except Empty:
-                continue  # If queue is empty, continue waiting for new messages
+                continue  # Wait for new messages if the queue is empty
 
-            currTranscription.append(message)  # Append the message to the current transcription list
-
-            # Now use the transcribed text in currTranscription to generate the turn shift prediction
-            full_turn_list = " ".join(currTranscription)  # Combine the list of transcriptions into one string
+            # Only add non-empty messages (you can strip whitespace)
+            if message.strip():
+                currTranscription.append(message)
             
+            # Combine the transcription list into one string
+            full_turn_list = " ".join(message)
+            
+            # Check if there is any content before processing
+            if not full_turn_list.strip():
+                continue  # Skip processing if transcription is empty
+
             # Process the transcribed text with TurnGPT
             out = turn_gpt_model.string_list_to_trp(message)
 
             for prob in out["trp_probs"][0]:
-                prob *= 10  # Adjusting the probabilities for visualization
+                prob *= 10  # Adjust probabilities for visualization
 
-            turn_shift_probs.put((out["trp_probs"][0], out['tokens'][0]))  # Put the turn shift probabilities into the queue
+            turn_shift_probs.put((out["trp_probs"][0], out['tokens'][0]))
     except KeyboardInterrupt:
         print("KeyboardInterrupt received, stopping turn shift calculation...")

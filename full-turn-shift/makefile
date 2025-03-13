@@ -73,6 +73,9 @@ install: init
 
 	sed -i '71s/s\.strip()/[s.strip()]/' $(TURN_GPT)/turngpt/model.py
 
+install-requirements:
+	conda run -p $(ENV_DIR) $(PIP) install -r requirements.txt
+
 # Remove the entire environment folder and delete TurnGPT.
 clean:
 	rm -rf $(VAP)

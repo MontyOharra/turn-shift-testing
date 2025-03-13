@@ -5,3 +5,5 @@ pydub
 matplotlib
 soundfile==0.12.1
 torchaudio
+webrtcvad
+librosa

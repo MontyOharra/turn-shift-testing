@@ -42,7 +42,7 @@ def main():
     try:
         while True:
             print(f'Current Transcription: {transcription_queue.get()}')
-            print(f'Turn Shift Probabilities: {turn_gpt_probs_queue.get()}')
+            # print(f'Turn Shift Probabilities: {turn_gpt_probs_queue.get()}')
     except KeyboardInterrupt:
         print("KeyboardInterrupt received, stopping threads...")
         stop_event.set()  # signal threads to exit
