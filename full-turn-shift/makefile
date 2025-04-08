@@ -102,3 +102,6 @@ turngpt-with-whisper:
 
 turngpt-vap-with-whisper:
 	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.turngpt_vap_with_whisper
+
+turngpt-vap-from-audiofiles:
+	conda run --live-stream -p $(ENV_DIR) $(PYTHON) -u -m applications.turngpt_vap_from_audiofiles

@@ -1,20 +1,29 @@
 import pyaudio
-import os
 import tempfile
 import wave
 import torch
 import matplotlib.pyplot as plt
-from turngpt.model import TurnGPT
+# from turngpt.model import TurnGPT
 from queue import Queue, Empty
 from faster_whisper import WhisperModel
 from typing import Optional
 from argparse import ArgumentParser
 
+import os
+import sys
+
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+print(sys.path)
+from TurnGPT.turngpt.model import TurnGPT
+
+
 def transcribeChunk(
         model : TurnGPT, 
         file_path : str
     ) -> str :
-    segments, info = model.transcribe(file_path, beam_sizWhisperModel(model_size_or_path="medium.en", device="cuda", compute_type="float16")e=7)
+    segments, info = model.transcribe(file_path, beam_size=7)
     transcription = ' '.join(segment.text for segment in segments)
     return transcription
 
@@ -66,7 +75,7 @@ def getAudioTranscription(
                     tmp_filename = tmpfile.name
                     wf = wave.open(tmp_filename, 'wb')
                     wf.setnchannels(channels)
-                    wf.setsampwidth(p.get_sample_size(default_format))
+                    wf.setgoogle_asampwidth(p.get_sample_size(default_format))
                     wf.setframerate(rate)
                     wf.writeframes(b''.join(audio_buffer))
                     wf.close()
@@ -157,7 +166,8 @@ def calculateTurnShiftFromTranscription(liveTranscription : Queue,):
             currTranscription.append(message)  # Append the message to the current transcription list
 
             # Now use the transcribed text in currTranscription to generate the turn shift prediction
-            full_turn_list = " ".join(currTranscription)  # Combine the list of transcriptions into one string
+            full_turn_list = " ".join([f"{item['speaker']}: {item['text']}" for item in currTranscription])
+
             
             # Process the transcribed text with TurnGPT
             out = model.string_list_to_trp(full_turn_list)

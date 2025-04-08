@@ -1,9 +1,13 @@
 # import pyaudio
-from src.utils import getAudioTranscription, printTranscription, calculateTurnShiftFromTranscription
+#from src.utils import getAudioTranscription, printTranscription, calculateTurnShiftFromTranscription
 from pydub import AudioSegment
 from threading import Thread
 from queue import Queue
+import sys, os
 
+sys.path.append(os.path.abspath("/home/bwilab/turn-shift/full-turn-shift/src/"))
+import utils
+from utils import calculateTurnShiftFromTranscription, printTranscription
 
 def getPnowPfuture(json_file):
     with open(json_file) as f:
@@ -33,7 +37,7 @@ def combine_wav(file1, file2, output_filename="output.wav", max_duration_ms=2 * 
     
     # Append the two audio segments
     combined_audio = audio1 + audio2
-    
+   
     if len(combined_audio) > max_duration_ms:
         combined_audio = combined_audio[-max_duration_ms:]
     
@@ -41,12 +45,50 @@ def combine_wav(file1, file2, output_filename="output.wav", max_duration_ms=2 * 
     
     print(f"Audio saved to {output_filename}. Total duration: {len(combined_audio) / 1000:.2f} seconds.")
 
+    print(f"Audio saved to {output_filename}. Total duration: {len(combined_audio) / 1000:.2f} seconds.")
+
 
 
 def main():
     turnGptQueue = Queue()
     liveTranscription = Thread(
-        target=getAudioTranscription,
+        target=utils.getAudioTranscription,
+        args=(
+            turnGptQueue,
+            9,
+            1,
+            1024,
+            2,      # record 2-second segments
+            0.1,    # with 0.5-second overlap
+            48000               # set the sample rate your mic supports
+        ),
+        daemon=True      
+    )
+
+    outputTranscription = Thread(
+        target=calculateTurnShiftFromTranscription,
+        args=(turnGptQueue,),
+        daemon=True
+    )
+
+    liveTranscription.start()
+    outputTranscription.start()
+
+    try:
+        while True:
+            pass  # Main thread stays alive, waiting for interrupt
+
+    except KeyboardInterrupt:
+        print("KeyboardInterrupt received, stopping threads...")
+        turnGptQueue.put(None)  # Gracefully stop both threads
+        liveTranscription.join()  # Ensure thread cleanup
+        outputTranscription.join()  # Ensure thread cleanup
+        print("All threads stopped.")
+
+def main():
+    turnGptQueue = Queue()
+    liveTranscription = Thread(
+        target=utils.getAudioTranscription,
         args=(
             turnGptQueue,
             9,

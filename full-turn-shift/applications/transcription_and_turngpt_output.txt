@@ -1,0 +1,420 @@
+Transcription: Speaker 1: I know right
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month Speaker 2: exactly
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116, 0.0026, 0.0077, 0.0170]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month Speaker 2: exactly Speaker 2: that sounds pretty accurate
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116, 0.0026, 0.0077, 0.0170,
+         0.0048, 0.0111, 0.0166, 0.0121, 0.0196, 0.0215]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month Speaker 2: exactly Speaker 2: that sounds pretty accurate Speaker 2: accurate that counts as recovery
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116, 0.0026, 0.0077, 0.0170,
+         0.0048, 0.0111, 0.0166, 0.0121, 0.0196, 0.0215, 0.0027, 0.0071, 0.0071,
+         0.0098, 0.0113, 0.0046, 0.0103]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month Speaker 2: exactly Speaker 2: that sounds pretty accurate Speaker 2: accurate that counts as recovery Speaker 2: what are you watching
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116, 0.0026, 0.0077, 0.0170,
+         0.0048, 0.0111, 0.0166, 0.0121, 0.0196, 0.0215, 0.0027, 0.0071, 0.0071,
+         0.0098, 0.0113, 0.0046, 0.0103, 0.0023, 0.0049, 0.0114, 0.0048, 0.0056,
+         0.0264]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month Speaker 2: exactly Speaker 2: that sounds pretty accurate Speaker 2: accurate that counts as recovery Speaker 2: what are you watching Speaker 2: class
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116, 0.0026, 0.0077, 0.0170,
+         0.0048, 0.0111, 0.0166, 0.0121, 0.0196, 0.0215, 0.0027, 0.0071, 0.0071,
+         0.0098, 0.0113, 0.0046, 0.0103, 0.0023, 0.0049, 0.0114, 0.0048, 0.0056,
+         0.0264, 0.0068, 0.0084, 0.0094]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month Speaker 2: exactly Speaker 2: that sounds pretty accurate Speaker 2: accurate that counts as recovery Speaker 2: what are you watching Speaker 2: class Speaker 2: classic let's hang out soon
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116, 0.0026, 0.0077, 0.0170,
+         0.0048, 0.0111, 0.0166, 0.0121, 0.0196, 0.0215, 0.0027, 0.0071, 0.0071,
+         0.0098, 0.0113, 0.0046, 0.0103, 0.0023, 0.0049, 0.0114, 0.0048, 0.0056,
+         0.0264, 0.0068, 0.0084, 0.0094, 0.0041, 0.0063, 0.0114, 0.0049, 0.0021,
+         0.0065, 0.0145, 0.0127]])
+
+Transcription: Speaker 1: I know right Speaker 1: has been good busy with work Speaker 1: but can't complain you Speaker 1: no Speaker 1: no way you used to hate run Speaker 1: that's awesome I was Speaker 1: to have that kind of motivation Speaker 1: I was mostly just been been been Speaker 1: binge watching Speaker 1: were you watching Breaking Bad I forgot Speaker 1: forgot how intense it gets Speaker 1: let's go Speaker 1: that's Speaker 1: fully text me when you're free Speaker 2: hey wow it's been Speaker 2: forever how have you been Speaker 2: been Speaker 2: same here live Speaker 2: it's been non-stop lately I Speaker 2: started running again Speaker 2: I did but Speaker 2: now it's kind of a stress relief I even signed Speaker 2: signed up for a half marathon next month Speaker 2: exactly Speaker 2: that sounds pretty accurate Speaker 2: accurate that counts as recovery Speaker 2: what are you watching Speaker 2: class Speaker 2: classic let's hang out soon Speaker 2: coffee or something
+TurnGPT Output (TRP Probs): tensor([[0.0468, 0.0441, 0.0234, 0.0134, 0.0296, 0.1581, 0.0268, 0.0085, 0.0064,
+         0.0232, 0.0751, 0.0492, 0.0299, 0.0318, 0.0053, 0.0068, 0.0073, 0.0036,
+         0.0057, 0.0168, 0.0207, 0.0021, 0.0067, 0.0275, 0.0069, 0.0056, 0.0115,
+         0.0094, 0.0119, 0.0187, 0.0136, 0.0167, 0.0203, 0.0025, 0.0090, 0.0242,
+         0.0044, 0.0347, 0.0109, 0.0112, 0.0068, 0.0103, 0.0079, 0.0027, 0.0111,
+         0.0070, 0.0038, 0.0158, 0.0015, 0.0041, 0.0082, 0.0025, 0.0040, 0.0049,
+         0.0066, 0.0068, 0.0051, 0.0008, 0.0022, 0.0076, 0.0054, 0.0005, 0.0025,
+         0.0030, 0.0057, 0.0228, 0.0066, 0.0148, 0.0037, 0.0067, 0.0011, 0.0031,
+         0.0044, 0.0054, 0.0065, 0.0042, 0.0220, 0.0048, 0.0077, 0.0054, 0.0029,
+         0.0046, 0.0013, 0.0048, 0.0158, 0.0017, 0.0033, 0.0046, 0.0052, 0.0065,
+         0.0096, 0.0024, 0.0035, 0.0025, 0.0172, 0.0052, 0.0091, 0.0190, 0.0221,
+         0.0139, 0.0033, 0.0086, 0.0030, 0.0045, 0.0224, 0.0065, 0.0030, 0.0067,
+         0.0148, 0.0072, 0.0107, 0.0095, 0.0057, 0.0136, 0.0111, 0.0199, 0.0168,
+         0.0029, 0.0079, 0.0149, 0.0030, 0.0028, 0.0113, 0.0097, 0.0143, 0.0042,
+         0.0030, 0.0062, 0.0059, 0.0057, 0.0145, 0.0013, 0.0044, 0.0043, 0.0032,
+         0.0026, 0.0036, 0.0049, 0.0045, 0.0148, 0.0019, 0.0034, 0.0013, 0.0027,
+         0.0085, 0.0043, 0.0026, 0.0054, 0.0065, 0.0017, 0.0065, 0.0068, 0.0085,
+         0.0035, 0.0037, 0.0100, 0.0126, 0.0081, 0.0116, 0.0026, 0.0077, 0.0170,
+         0.0048, 0.0111, 0.0166, 0.0121, 0.0196, 0.0215, 0.0027, 0.0071, 0.0071,
+         0.0098, 0.0113, 0.0046, 0.0103, 0.0023, 0.0049, 0.0114, 0.0048, 0.0056,
+         0.0264, 0.0068, 0.0084, 0.0094, 0.0041, 0.0063, 0.0114, 0.0049, 0.0021,
+         0.0065, 0.0145, 0.0127, 0.0014, 0.0052, 0.0091, 0.0021, 0.0165]])
+

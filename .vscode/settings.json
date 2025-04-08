@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./turn-gpt-test/TurnGPT"
+        "./turn-gpt-test/TurnGPT",
+        "./full-turn-shift/src"
     ]
 }

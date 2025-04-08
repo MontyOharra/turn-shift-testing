@@ -63,3 +63,6 @@ cover/
 
 # Environments
 */.venv
+
+# Google credentials
+full-turn-shift/credentials
